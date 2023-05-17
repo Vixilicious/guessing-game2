@@ -1,0 +1,8 @@
+<div>
+  <h2>Log History</h2>
+  <ul>
+    <li *ngFor="let log of logHistory">
+      {{ log.guess }} - {{ log.result }} ({{ log.date | date : "medium" }})
+    </li>
+  </ul>
+</div>

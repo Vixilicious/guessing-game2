@@ -1,0 +1,8 @@
+<div>
+  <h2>Select User</h2>
+  <ul>
+    <li *ngFor="let user of userService.users" (click)="selectUser(user)">
+      {{ user.username }}
+    </li>
+  </ul>
+</div>

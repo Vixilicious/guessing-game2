@@ -1,0 +1,21 @@
+<div>
+  <h2>Choose User</h2>
+  <div *ngIf="!userService.selectedUser">
+    <p>No user selected. Please select or create a user.</p>
+    <button (click)="showUserList()">Select User</button>
+    <div>
+      <input
+        type="text"
+        [(ngModel)]="newUsername"
+        placeholder="Enter username"
+      />
+      <button (click)="createUser()">Create User</button>
+    </div>
+  </div>
+  <div *ngIf="userService.selectedUser">
+    <p>Selected User: {{ userService.selectedUser.username }}</p>
+    <button (click)="startGame()">Start Game</button>
+    <button (click)="showLogHistory()">Your Log History</button>
+    <button (click)="showAllLogHistory()">All Log History</button>
+  </div>
+</div>
